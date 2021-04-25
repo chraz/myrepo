@@ -56,11 +56,6 @@ public class Employee {
     }
       public void setCar(String value) {
         car = value;
-    }
-
-
-
-  
-
+      }
     
 }
