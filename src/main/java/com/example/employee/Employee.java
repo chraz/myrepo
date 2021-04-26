@@ -9,23 +9,41 @@ import javax.persistence.Id;
 @Entity
 public class Employee {
 
-    private String name;
-    private String car;
-    private String company;
-
-
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
+    public Employee(){
+
+        super();
+    }
+
+    public Employee(String name, String car, String company){
+
+        super();
+
+        this.name = name;
+        this.car = car;
+        this.company = company;
+
+    }
+
     public Integer getId() {
         return id;
+      }
+      public void setId(Integer id) {
+        this.id = id;
       }
     
       /**
      * @return the company
      */
+
+
+    private String name;
+    private String car;
+    private String company;
+
     public String getCompany() {
         return company;
     }
@@ -36,10 +54,6 @@ public class Employee {
     public void setCompany(String value) {
         this.company = value;
     }
-
-    public void setId(Integer id) {
-        this.id = id;
-      }
 
       public void setName(String v)
       {
@@ -54,8 +68,7 @@ public class Employee {
       public String getCar() {
         return car;
     }
-      public void setCar(String value) {
-        car = value;
+      public void setCar(String v) {
+        car = v;
       }
-    
 }
