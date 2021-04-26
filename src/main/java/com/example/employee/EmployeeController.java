@@ -60,6 +60,7 @@ public class EmployeeController {
     @PostMapping(path="/employee", consumes="application/json", produces = "application/json")
     @CrossOrigin()
     Employee add(@RequestBody Employee p){
+        employeeService.add(p);
         return p;
        
     }
